@@ -1,30 +1,23 @@
 # Nginx ![](https://www.andreyus.com/wp-content/uploads/2019/08/NGINX-logo-rgb-large-1024x344.png)
-**nginx [engine x]** — это **HTTP-сервер** и **обратный прокси-сервер**, **почтовый прокси-сервер**, а также **TCP/UDP прокси-сервер общего назначения**, изначально написанный [*Игорем Сысоевым*](https://ru.wikipedia.org/wiki/%D0%A1%D1%8B%D1%81%D0%BE%D0%B5%D0%B2,_%D0%98%D0%B3%D0%BE%D1%80%D1%8C_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82)). Уже длительное время он обслуживает серверы многих высоконагруженных российских сайтов, таких как [Яндекс](https://yandex.ru/), [Mail.Ru](https://mail.ru/), [ВКонтакте](https://vk.com/) и [Рамблер](https://www.rambler.ru/). [Согласно статистике Netcraft](https://news.netcraft.com/archives/category/web-server-survey/) - **nginx** обслуживал или проксировал **25.58%** самых нагруженных сайтов в **июле 2020 года**. 
+**Nginx [engine x]** — это **HTTP-сервер** и **обратный прокси-сервер**, **почтовый прокси-сервер**, а также **TCP/UDP прокси-сервер общего назначения**, изначально написанный [**Игорем Сысоевым**](https://ru.wikipedia.org/wiki/%D0%A1%D1%8B%D1%81%D0%BE%D0%B5%D0%B2,_%D0%98%D0%B3%D0%BE%D1%80%D1%8C_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82)). Уже длительное время он обслуживает серверы многих высоконагруженных российских сайтов, таких как [Яндекс](https://yandex.ru/), [Mail.Ru](https://mail.ru/), [ВКонтакте](https://vk.com/) и [Рамблер](https://www.rambler.ru/). [Согласно статистике Netcraft](https://news.netcraft.com/archives/category/web-server-survey/) - **nginx** обслуживал или проксировал **25.58%** самых нагруженных сайтов в **июле 2020 года**. 
 
 Вот некоторые примеры успешного внедрения **nginx**: *[Dropbox](https://www.dropbox.com/ru/), [Netflix](https://www.netflix.com/ru/), [Wordpress.com](https://ru.wordpress.com/), [FastMail.FM](https://www.fastmail.com/login/?domain=fastmail.fm)*
 
-Исходные тексты и документация распространяются под [BSD-подобной лицензией](https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F_BSD) из 2 пунктов.
-
-Коммерческая поддержка осуществляется компанией [**Nginx, Inc.**](https://nginx.org/ru/)
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
-### Installing
+### Протестированные ОС и платформы, поддерживающие установку "Nginx"
+----
+FreeBSD 3 — 12 / i386; FreeBSD 5 — 12 / amd64; FreeBSD 11 / ppc; FreeBSD 12 / ppc64;
+Linux 2.2 — 4 / i386; Linux 2.6 — 5 / amd64; Linux 3 — 4 / armv6l, armv7l, aarch64, ppc64le;
+Solaris 9 / i386, sun4u; Solaris 10 / i386, amd64, sun4v; Solaris 11 / x86;
+AIX 7.1 / powerpc;
+HP-UX 11.31 / ia64;
+macOS / ppc, i386, x86_64;
+Windows XP, Windows Server 2003, Windows 7, Windows 10.
 
 ### Инструкции по установке
+----
 Для того, чтобы поставить **nginx** на новой машине, необходимо подключить и настроить репозиторий пакетов **nginx**. После этого можно будет установить и обновлять **nginx** из этого репозитория.
 
-#### RHEL/CentOS
+#### [RHEL/CentOS]
 Установите пакеты, необходимые для подключения yum-репозитория:
 
 ```
@@ -53,18 +46,18 @@ module_hotfixes=true
 ```
 sudo yum-config-manager --enable nginx-mainline
 ```
-Чтобы установить nginx, выполните следующую команду:
+Чтобы установить **nginx**, выполните следующую команду:
 ```
 sudo yum install nginx
 ```
 При запросе подтверждения GPG-ключа проверьте, что отпечаток ключа совпадает с **573B FD6B 3D8F BC64 1079 A6AB ABF5 BD82 7BD9 BF62**, и, если это так, подтвердите его.
 
-#### Debian
-Установите пакеты, необходимые для подключения apt-репозитория:
+#### [Debian]
+Установите пакеты, необходимые для подключения **apt-репозитория**:
 ```
 sudo apt install curl gnupg2 ca-certificates lsb-release
 ```
-Для подключения apt-репозитория для стабильной версии **nginx**, выполните следующую команду:
+Для подключения **apt-репозитория** для стабильной версии **nginx**, выполните следующую команду:
 
 ```
 echo "deb http://nginx.org/packages/debian `lsb_release -cs` nginx" \
@@ -95,7 +88,7 @@ sudo apt update
 sudo apt install nginx
 ```
 
-#### Ubuntu
+#### [Ubuntu]
 
 Установите пакеты, необходимые для подключения apt-репозитория:
 ```
@@ -133,57 +126,36 @@ sudo apt update
 sudo apt install nginx
 ```
 
+## Версии
+----
 
-## Running the tests
+Список доступных версий указан на [оффициальном сайте](https://nginx.org/) проекта. 
 
-Explain how to run the automated tests for this system
+Скачать необходимую версию можно [здесь](https://nginx.org/ru/download.html).
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+## Авторы
+----
+[**Игорь Сысоев**](https://ru.wikipedia.org/wiki/%D0%A1%D1%8B%D1%81%D0%BE%D0%B5%D0%B2,_%D0%98%D0%B3%D0%BE%D1%80%D1%8C_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82)).
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
+## Лицензия
+----
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Исходные тексты и документация проекта распространяются под [BSD-подобной лицензией](https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F_BSD) из 2 пунктов.
 
-## Acknowledgments
+Ссылки
+----
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Домашняя страница: https://nginx.org/ru/
+* Заргузки: [.tar.gz](https://nginx.org/download/nginx-1.19.1.tar.gz) or [.zip](https://nginx.org/download/nginx-1.19.1.zip)
+* Новости: https://nginx.org/
+* Документация: https://nginx.org/ru/docs/
+* Сообщения об ошике: https://trac.nginx.org/nginx
+* Часто задаваемые вопросы (FAQ): https://nginx.org/en/docs/faq.html
+* Твиттер: [@nginxorg](https://twitter.com/nginxorg)
+* [Скриншоты](https://www.google.com/search?q=nginx+screenshots&newwindow=1&sxsrf=ALeKk01vxHYhNaNLUNbpAlV5Op1CQMvu7w:1596407158966&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjj34GNyP3qAhXpwosKHe_KCkkQ_AUoAXoECA4QAw&biw=2560&bih=1297)
+
+
+
+
