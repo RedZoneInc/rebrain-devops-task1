@@ -18,12 +18,12 @@
 Для того, чтобы поставить **nginx** на новой машине, необходимо подключить и настроить репозиторий пакетов **nginx**. После этого можно будет установить и обновлять **nginx** из этого репозитория.
 
 #### [RHEL/CentOS]
-Установите пакеты, необходимые для подключения yum-репозитория:
+Установите пакеты, необходимые для подключения **yum-репозитория**:
 
 ```
 sudo yum install yum-utils
 ```
-Для подключения yum-репозитория создайте файл с именем */etc/yum.repos.d/nginx.repo* со следующим содержимым:
+Для подключения **yum-репозитория** создайте файл с именем */etc/yum.repos.d/nginx.repo* со следующим содержимым:
 ```
 [nginx-stable]
 name=nginx stable repo
@@ -90,11 +90,11 @@ sudo apt install nginx
 
 #### [Ubuntu]
 
-Установите пакеты, необходимые для подключения apt-репозитория:
+Установите пакеты, необходимые для подключения **apt-репозитория**:
 ```
 sudo apt install curl gnupg2 ca-certificates lsb-release
 ```
-Для подключения apt-репозитория для стабильной версии **nginx**, выполните следующую команду:
+Для подключения **apt-репозитория** для стабильной версии **nginx**, выполните следующую команду:
 ```
 echo "deb http://nginx.org/packages/ubuntu `lsb_release -cs` nginx" \
     | sudo tee /etc/apt/sources.list.d/nginx.list
@@ -184,16 +184,13 @@ sudo service nginx stop
 
 Больше информации о управлении службой **nginx**, настройках конфигурационного файла сервера можно узнать в [руководстве для начинающих](https://nginx.org/ru/docs/beginners_guide.html) или в [технической документации](https://nginx.org/ru/docs/).
 
-Версии
-----
-
-Список доступных версий указан на [оффициальном сайте](https://nginx.org/) проекта. 
-
-Скачать необходимую версию можно [здесь](https://nginx.org/ru/download.html).
-
 Авторы
 ----
 [**Игорь Сысоев**](https://ru.wikipedia.org/wiki/%D0%A1%D1%8B%D1%81%D0%BE%D0%B5%D0%B2,_%D0%98%D0%B3%D0%BE%D1%80%D1%8C_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82))
+
+Версии
+----
+Скачать необходимую версию можно [здесь](https://nginx.org/ru/download.html).
 
 Лицензия
 ----
@@ -207,5 +204,6 @@ sudo service nginx stop
 * Документация: https://nginx.org/ru/docs/
 * Техподдержка: https://nginx.org/en/support.html
 * Часто задаваемые вопросы (FAQ): https://nginx.org/en/docs/faq.html
+* Исходный код: https://trac.nginx.org/nginx/browser
 * Твиттер: [@nginxorg](https://twitter.com/nginxorg)
 * [Скриншоты](https://www.google.com/search?q=nginx+screenshots&newwindow=1&sxsrf=ALeKk01vxHYhNaNLUNbpAlV5Op1CQMvu7w:1596407158966&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjj34GNyP3qAhXpwosKHe_KCkkQ_AUoAXoECA4QAw&biw=2560&bih=1297)
