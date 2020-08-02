@@ -5,13 +5,13 @@
 
 Протестированные ОС и платформы, поддерживающие установку "Nginx"
 ----
-FreeBSD 3 — 12 / i386; FreeBSD 5 — 12 / amd64; FreeBSD 11 / ppc; FreeBSD 12 / ppc64;
-Linux 2.2 — 4 / i386; Linux 2.6 — 5 / amd64; Linux 3 — 4 / armv6l, armv7l, aarch64, ppc64le;
-Solaris 9 / i386, sun4u; Solaris 10 / i386, amd64, sun4v; Solaris 11 / x86;
-AIX 7.1 / powerpc;
-HP-UX 11.31 / ia64;
-macOS / ppc, i386, x86_64;
-Windows XP, Windows Server 2003, Windows 7, Windows 10.
+* FreeBSD 3 — 12 / i386; FreeBSD 5 — 12 / amd64; FreeBSD 11 / ppc; FreeBSD 12 / ppc64;
+* Linux 2.2 — 4 / i386; Linux 2.6 — 5 / amd64; Linux 3 — 4 / armv6l, armv7l, aarch64, ppc64le;
+* Solaris 9 / i386, sun4u; Solaris 10 / i386, amd64, sun4v; Solaris 11 / x86;
+* AIX 7.1 / powerpc;
+* HP-UX 11.31 / ia64;
+* macOS / ppc, i386, x86_64;
+* Windows XP, Windows Server 2003, Windows 7, Windows 10.
 
 Инструкции по установке
 ----
@@ -114,17 +114,31 @@ sudo apt-key fingerprint ABF5BD827BD9BF62
 ```
 
 Вывод команды должен содержать полный отпечаток ключа **573B FD6B 3D8F BC64 1079 A6AB ABF5 BD82 7BD9 BF62**:
-
+```
 pub   rsa2048 2011-08-19 [SC] [expires: 2024-06-14]
       573B FD6B 3D8F BC64 1079  A6AB ABF5 BD82 7BD9 BF62
 uid   [ unknown] nginx signing key <signing-key@nginx.com>
-
+```
 Чтобы установить **nginx**, выполните следующие команды:
 
 ```
 sudo apt update
 sudo apt install nginx
 ```
+
+Запуск Nginx
+----
+Чтобы запустить **nginx HTTP-сервер** необходимо выполнить команду:
+* для последних версий **REHL/Centos/Ubuntu/Debian**
+```
+systemctl start nginx
+```
+
+Проверка запуска
+----
+Перейдите по ссылке в браузере http://your-server-ip-address:80/
+Если сервер был установлен и запущен правильно, то в браузере вы должны увидеть **страницу по умолчанию** сервера **nginx**:
+![](https://live.staticflickr.com/2829/12112587324_c2bb7b3338_z.jpg)
 
 Версии
 ----
@@ -139,7 +153,6 @@ sudo apt install nginx
 
 Лицензия
 ----
-
 Исходные тексты и документация проекта распространяются под [BSD-подобной лицензией](https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F_BSD) из 2 пунктов.
 
 Ссылки
