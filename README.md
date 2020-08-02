@@ -38,8 +38,8 @@
   * POP3: USER/PASS, APOP, AUTH LOGIN/PLAIN/CRAM-MD5
   * IMAP: LOGIN, AUTH LOGIN/PLAIN/CRAM-MD5
   * SMTP: AUTH LOGIN/PLAIN/CRAM-MD5
-  * Поддержка SSL
-  * Поддержка STARTTLS и STLS
+* Поддержка SSL
+* Поддержка STARTTLS и STLS
 
 #### Функциональность TCP/UDP прокси-сервера
 * Проксирование TCP и UDP
