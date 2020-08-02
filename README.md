@@ -3,7 +3,7 @@
 
 Вот некоторые примеры успешного внедрения **nginx**: *[Dropbox](https://www.dropbox.com/ru/), [Netflix](https://www.netflix.com/ru/), [Wordpress.com](https://ru.wordpress.com/), [FastMail.FM](https://www.fastmail.com/login/?domain=fastmail.fm)*
 
-### Протестированные ОС и платформы, поддерживающие установку "Nginx"
+Протестированные ОС и платформы, поддерживающие установку "Nginx"
 ----
 FreeBSD 3 — 12 / i386; FreeBSD 5 — 12 / amd64; FreeBSD 11 / ppc; FreeBSD 12 / ppc64;
 Linux 2.2 — 4 / i386; Linux 2.6 — 5 / amd64; Linux 3 — 4 / armv6l, armv7l, aarch64, ppc64le;
@@ -13,7 +13,7 @@ HP-UX 11.31 / ia64;
 macOS / ppc, i386, x86_64;
 Windows XP, Windows Server 2003, Windows 7, Windows 10.
 
-### Инструкции по установке
+Инструкции по установке
 ----
 Для того, чтобы поставить **nginx** на новой машине, необходимо подключить и настроить репозиторий пакетов **nginx**. После этого можно будет установить и обновлять **nginx** из этого репозитория.
 
@@ -126,36 +126,29 @@ sudo apt update
 sudo apt install nginx
 ```
 
-## Версии
+Версии
 ----
 
 Список доступных версий указан на [оффициальном сайте](https://nginx.org/) проекта. 
 
 Скачать необходимую версию можно [здесь](https://nginx.org/ru/download.html).
 
-## Авторы
+Авторы
 ----
 [**Игорь Сысоев**](https://ru.wikipedia.org/wiki/%D0%A1%D1%8B%D1%81%D0%BE%D0%B5%D0%B2,_%D0%98%D0%B3%D0%BE%D1%80%D1%8C_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87_(%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%81%D1%82)).
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## Лицензия
+Лицензия
 ----
 
 Исходные тексты и документация проекта распространяются под [BSD-подобной лицензией](https://ru.wikipedia.org/wiki/%D0%9B%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D1%8F_BSD) из 2 пунктов.
 
 Ссылки
 ----
-
 * Домашняя страница: https://nginx.org/ru/
-* Заргузки: [.tar.gz](https://nginx.org/download/nginx-1.19.1.tar.gz) or [.zip](https://nginx.org/download/nginx-1.19.1.zip)
+* Заргузки: [.tar.gz](https://nginx.org/download/nginx-1.19.1.tar.gz) или [.zip](https://nginx.org/download/nginx-1.19.1.zip)
 * Новости: https://nginx.org/
 * Документация: https://nginx.org/ru/docs/
-* Сообщения об ошике: https://trac.nginx.org/nginx
+* Техподдержка: https://nginx.org/en/support.html
 * Часто задаваемые вопросы (FAQ): https://nginx.org/en/docs/faq.html
 * Твиттер: [@nginxorg](https://twitter.com/nginxorg)
 * [Скриншоты](https://www.google.com/search?q=nginx+screenshots&newwindow=1&sxsrf=ALeKk01vxHYhNaNLUNbpAlV5Op1CQMvu7w:1596407158966&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjj34GNyP3qAhXpwosKHe_KCkkQ_AUoAXoECA4QAw&biw=2560&bih=1297)
-
-
-
-
